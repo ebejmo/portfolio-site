@@ -5,6 +5,7 @@ import { defineConfig } from 'eslint/config';
 
 export default defineConfig([
   {
+    ignores: ['node_modules', 'dist', 'build'],
     files: ['**/*.{js,mjs,cjs}'],
     languageOptions: {
       ecmaVersion: 'latest',
@@ -16,8 +17,8 @@ export default defineConfig([
       prettier: prettierPlugin,
     },
     rules: {
-      'prettier/prettier': 'error',
+      ...prettierPlugin.configs.recommended.rules,
     },
-    extends: ['js/recommended', 'plugin:prettier/recommended'],
+    extends: ['js/recommended'],
   },
 ]);
