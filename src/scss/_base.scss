@@ -1,0 +1,40 @@
+@use './variables' as *;
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  background-color: $color-bg;
+}
+
+body {
+  font-family: $font-body;
+  line-height: 1.6;
+  font-size: 1rem;
+  color: $color-primary;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-heading;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+a {
+  color: $color-text;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}

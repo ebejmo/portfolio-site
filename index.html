@@ -4,10 +4,52 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Portfolio || Emil Bejmo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+    <div class="site-wrapper">
+      <header class="header">
+        <div class="container header-content">
+          <a href="#" class="logo">Emil Bejmo</a>
+          <nav class="nav">
+            <ul class="nav-list">
+              <li><a href="#about">About</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <main class="site-main container">
+        <section id="hero" class="hero-section">
+          <div class="hero-grid">
+            <div class="hero-text">
+              <h2>Tjena, I'm Emil 👋</h2>
+              <p>This will be cool stuff. Hockey now code</p>
+            </div>
+            <div class="hero-image-wrapper">
+              <img src="./src/assets/images/profile-pic.png" alt="Emil in hockey gear" />
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container">
+          <p>&copy; 2025 Emil Bejmo - Some rights reserved</p>
+        </div>
+      </footer>
+    </div>
+
+    <script type="module" src="/src/js/main.js"></script>
   </body>
 </html>
