@@ -1,11 +1,10 @@
 import '../scss/main.scss';
 
-console.log('hello');
+const readMoreBtn = document.getElementById('readMoreBtn');
+const aboutText = document.querySelector('.about-text');
 
-const hamburger = document.querySelector('.hamburger');
-const nav = document.querySelector('.nav');
-
-hamburger.addEventListener('click', () => {
-  hamburger.classList.toggle('open');
-  nav.classList.toggle('open');
+readMoreBtn.addEventListener('click', () => {
+  const isExpanded = aboutText.classList.toggle('expanded');
+  readMoreBtn.textContent = isExpanded ? 'Read less' : 'Read more';
+  readMoreBtn.setAttribute('aria-expanded', isExpanded);
 });

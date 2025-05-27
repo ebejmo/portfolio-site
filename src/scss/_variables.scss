@@ -1,13 +1,15 @@
-$color-primary: #ff4f81;
-$color-accent: #00ffe7;
 $color-bg: #1e1e2f;
 $color-text: #f1f1f1;
-$color-muted: #999999;
-
+$color-code-bg: #2a2a3a;
+$color-code-text: #bbb;
+$gradient-silver-text: linear-gradient(90deg, #ccc, #eee, #aaa);
 $border-color: #b3b3b3;
 
 $font-body: 'DM Sans', sans-serif;
 $font-heading: 'DM Sans', sans-serif;
+$font-code: 'Fira Code', monospace;
 
 $max-width: 1200px;
 $spacing-unit: 1rem;
+
+$button-gradient: linear-gradient(90deg, #aaa, #fff, #aaa);

@@ -1,0 +1,64 @@
+@use './variables' as *;
+
+.about-section {
+  min-height: 500px;
+  padding: 4rem 0;
+  border-bottom: 1px solid $border-color;
+
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    max-width: $max-width;
+    margin: 0 auto;
+
+    @media (min-width: 500px) {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+  }
+
+  .about-image {
+    flex-shrink: 0;
+
+    img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      border: 2px solid $border-color;
+    }
+  }
+
+  .about-text {
+    color: $color-text;
+    max-width: 600px;
+    position: relative;
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    .about-more {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition:
+        max-height 0.4s ease,
+        opacity 0.4s ease;
+    }
+
+    &.expanded {
+      .about-more {
+        max-height: 500px;
+        opacity: 1;
+      }
+    }
+
+    p {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      font-weight: 300;
+    }
+  }
+}

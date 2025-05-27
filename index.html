@@ -9,8 +9,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fira+Code:wght@300..700&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -22,6 +24,7 @@
           <nav class="nav">
             <ul class="nav-list">
               <li><a href="#about">About</a></li>
+              <li><a href="#skills">Skills</a></li>
               <li><a href="#projects">Projects</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
@@ -33,12 +36,64 @@
         <section id="hero" class="hero-section">
           <div class="hero-grid">
             <div class="hero-text">
-              <h2>Tjena, I'm Emil 👋</h2>
-              <p>This will be cool stuff. Hockey now code</p>
+              <code class="code-tag">// aspiring</code>
+              <h1><span class="gradient-text">front end developer</span></h1>
+              <p class="intro-text">I swapped slapshots for semicolons.</p>
+              <a href="#projects" class="button hero-button">View Projects</a>
             </div>
+
             <div class="hero-image-wrapper">
               <img src="./src/assets/images/profile-pic.png" alt="Emil in hockey gear" />
             </div>
+          </div>
+        </section>
+
+        <section id="about" class="about-section">
+          <div class="container about-container">
+            <div class="about-image">
+              <img
+                src="https://ui-avatars.com/api/?name=Emil+Bejmo&background=1e1e2f&color=f1f1f1&size=256"
+                alt="Portrait of Emil Bejmo"
+              />
+            </div>
+            <div class="about-text">
+              <h2><span class="gradient-text">About Me</span></h2>
+              <p>
+                I'm Emil — a former professional hockey player turned front-end developer. After
+                over a decade of chasing pucks across Europe, I'm now (trying to) build responsive,
+                accessible, and user-focused web experiences.
+              </p>
+              <div class="about-more">
+                <p>
+                  I bring the same grit and team mentality from the ice to every project I work on.
+                  Currently sharpening my skills in JavaScript, React, SCSS, and modern UI design.
+                </p>
+                <p>
+                  Proud father of a two year old daughter. Swede living outside of Oslo, Norway.
+                </p>
+              </div>
+              <button class="read-more-button" id="readMoreBtn" aria-expanded="false">
+                Read more
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section id="skills" class="skills-section">
+          <div class="container skills-container">
+            <h2 class="heading-container">
+              <span class="gradient-text">Skills</span
+              ><code class="code-tag">// in development</code>
+            </h2>
+            <ul class="skills-grid">
+              <li><img src="./src/assets/icons/html5.svg" alt="HTML" /></li>
+              <li><img src="./src/assets/icons/css.svg" alt="CSS" /></li>
+              <li><img src="./src/assets/icons/bootstrap.svg" alt="Bootstrap" /></li>
+              <li><img src="./src/assets/icons/sass.svg" alt="Sass" /></li>
+              <li><img src="./src/assets/icons/javascript.svg" alt="JavaScript" /></li>
+              <li><img src="./src/assets/icons/react.svg" alt="React" /></li>
+              <li><img src="./src/assets/icons/git.svg" alt="Git" /></li>
+            </ul>
           </div>
         </section>
       </main>
