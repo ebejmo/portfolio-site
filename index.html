@@ -135,15 +135,16 @@
                   <div class="overlay"></div>
                 </div>
                 <div class="project-content">
-                  <h3>Project Two</h3>
-                  <p class="short-info">Short description of the project goes here.</p>
+                  <h3>Auctionary</h3>
+                  <p class="short-info">
+                    Auction site where users can log in & out. Bid on items and upload there own
+                  </p>
                   <button
-                    class="read-more-btn"
-                    data-toggle
+                    class="button button--light"
+                    data-project-id="project2"
                     aria-expanded="false"
-                    aria-controls="project2-details"
                   >
-                    Read more
+                    View details
                   </button>
                   <div class="project-details" id="project2-details" hidden>
                     <p>Detailed info about Project two…</p>
@@ -157,15 +158,15 @@
                   <div class="overlay"></div>
                 </div>
                 <div class="project-content">
-                  <h3>Project Three</h3>
-                  <p class="short-info">Short description of the project goes here.</p>
+                  <h3>Coming Soon</h3>
+                  <p class="short-info">Typescript project work in progress.</p>
                   <button
-                    class="read-more-btn"
-                    data-toggle
+                    class="button button--light"
+                    data-project-id="project1"
                     aria-expanded="false"
-                    aria-controls="project1-details"
+                    disabled
                   >
-                    Read more
+                    View details
                   </button>
                   <div class="project-details" id="project3-details" hidden>
                     <p>Detailed info about Project three…</p>
@@ -182,6 +183,19 @@
           <p>&copy; 2025 Emil Bejmo - Some rights reserved</p>
         </div>
       </footer>
+    </div>
+
+    <div class="project-modal-overlay" data-modal-overlay hidden>
+      <div class="project-modal">
+        <div class="project-modal-img-container">
+          <img src="" alt="" class="project-modal-image" />
+        </div>
+        <button class="modal-close" aria-label="Close modal">&times;</button>
+        <h2 class="project-modal-title"></h2>
+        <p class="project-modal-description"></p>
+        <ul class="project-modal-tools"></ul>
+        <a href="#" target="_blank" rel="noopener" class="project-modal-link">View Live</a>
+      </div>
     </div>
 
     <script type="module" src="/src/js/main.js"></script>

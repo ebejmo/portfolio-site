@@ -8,3 +8,9 @@ readMoreBtn.addEventListener('click', () => {
   readMoreBtn.textContent = isExpanded ? 'Read less' : 'Read more';
   readMoreBtn.setAttribute('aria-expanded', isExpanded);
 });
+
+import { initializeModal } from './components/modal';
+
+document.addEventListener('DOMContentLoaded', () => {
+  initializeModal();
+});
