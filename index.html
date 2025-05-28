@@ -88,12 +88,91 @@
             <ul class="skills-grid">
               <li><img src="./src/assets/icons/html5.svg" alt="HTML" /></li>
               <li><img src="./src/assets/icons/css.svg" alt="CSS" /></li>
-              <li><img src="./src/assets/icons/bootstrap.svg" alt="Bootstrap" /></li>
               <li><img src="./src/assets/icons/sass.svg" alt="Sass" /></li>
               <li><img src="./src/assets/icons/javascript.svg" alt="JavaScript" /></li>
               <li><img src="./src/assets/icons/react.svg" alt="React" /></li>
+              <li><img src="./src/assets/icons/vite.svg" alt="Vite" /></li>
               <li><img src="./src/assets/icons/git.svg" alt="Git" /></li>
+              <li><img src="./src/assets/icons/bootstrap.svg" alt="Bootstrap" /></li>
             </ul>
+          </div>
+        </section>
+
+        <section id="projects" class="projects-section">
+          <div class="container projects-container">
+            <h2><span class="gradient-text">Projects</span></h2>
+            <div class="projects-grid">
+              <article class="project-card card1" data-project>
+                <div class="image-wrapper">
+                  <img
+                    src="./src/assets/images/projects/preview-slapshop.png"
+                    alt="Project 1 Screenshot"
+                  />
+                  <div class="overlay"></div>
+                </div>
+                <div class="project-content">
+                  <h3>SlapShop</h3>
+                  <p class="short-info">
+                    Built with React, SlapShop combines dynamic product handling with a custom
+                    light/dark theme.
+                  </p>
+                  <button
+                    class="button button--light"
+                    data-project-id="project1"
+                    aria-expanded="false"
+                  >
+                    View details
+                  </button>
+                  <div class="project-details" id="project1-details" hidden>
+                    <p>Detailed info about Project One…</p>
+                  </div>
+                </div>
+              </article>
+
+              <article class="project-card card2" data-project>
+                <div class="image-wrapper">
+                  <img src="/path/to/project1.jpg" alt="Project 2 Screenshot" />
+                  <div class="overlay"></div>
+                </div>
+                <div class="project-content">
+                  <h3>Project Two</h3>
+                  <p class="short-info">Short description of the project goes here.</p>
+                  <button
+                    class="read-more-btn"
+                    data-toggle
+                    aria-expanded="false"
+                    aria-controls="project2-details"
+                  >
+                    Read more
+                  </button>
+                  <div class="project-details" id="project2-details" hidden>
+                    <p>Detailed info about Project two…</p>
+                  </div>
+                </div>
+              </article>
+
+              <article class="project-card card3" data-project>
+                <div class="image-wrapper">
+                  <img src="/path/to/project1.jpg" alt="Project 3 Screenshot" />
+                  <div class="overlay"></div>
+                </div>
+                <div class="project-content">
+                  <h3>Project Three</h3>
+                  <p class="short-info">Short description of the project goes here.</p>
+                  <button
+                    class="read-more-btn"
+                    data-toggle
+                    aria-expanded="false"
+                    aria-controls="project1-details"
+                  >
+                    Read more
+                  </button>
+                  <div class="project-details" id="project3-details" hidden>
+                    <p>Detailed info about Project three…</p>
+                  </div>
+                </div>
+              </article>
+            </div>
           </div>
         </section>
       </main>

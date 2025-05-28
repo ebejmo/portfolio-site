@@ -1,3 +1,4 @@
+@use 'sass:color';
 @use './variables' as *;
 
 @mixin gradient-heading {
@@ -58,7 +59,6 @@ img {
   font-weight: 400;
   position: relative;
   overflow: hidden;
-  border-radius: 0.5rem;
   transition: transform 0.3s ease;
 
   &::before {
@@ -75,6 +75,19 @@ img {
 
   &:hover::before {
     left: 0;
+  }
+}
+
+.button--light {
+  border-image: $button-gradient-dark 1;
+  color: $color-text-card;
+
+  &::before {
+    background: $button-gradient-dark;
+  }
+
+  &:hover {
+    color: color.adjust($color-text-card, $lightness: -10%);
   }
 }
 
@@ -100,7 +113,7 @@ img {
   background-color: $color-code-bg;
   color: $color-code-text;
   padding: 0.2rem 0.5rem;
-  border-radius: 0.25rem;
+  border-radius: $border-radius;
   font-size: 0.85rem;
   display: inline-block;
   margin-bottom: 0.75rem;
