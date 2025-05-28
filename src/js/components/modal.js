@@ -20,20 +20,27 @@ export function initializeModal() {
     modalImage.alt = project.imageAlt;
     modalTitle.textContent = project.title;
     modalDescription.textContent = project.description;
+
     modalTools.innerHTML = '';
     project.tools.forEach((tool) => {
       const li = document.createElement('li');
       li.textContent = tool;
       modalTools.appendChild(li);
     });
+
     modalLink.href = project.liveUrl;
 
     modalOverlay.removeAttribute('hidden');
-    modalOverlay.classList.add('active');
+    requestAnimationFrame(() => {
+      modalOverlay.classList.add('active');
+    });
   }
 
   function closeModal() {
-    modalOverlay.setAttribute('hidden', '');
+    modalOverlay.classList.remove('active');
+    setTimeout(() => {
+      modalOverlay.setAttribute('hidden', '');
+    }, 300);
   }
 
   function handleCloseTrigger(e) {

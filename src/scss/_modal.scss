@@ -9,6 +9,14 @@
   align-items: center;
   justify-content: center;
   z-index: 5;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+
+  &.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
 
   &[hidden] {
     display: none;
@@ -21,66 +29,75 @@
   padding: $spacing-unit;
   border-radius: $border-radius;
   font-size: 1rem;
-  // color: red;
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
 
-  .project-modal-image {
-    max-height: 300px;
-    object-fit: cover;
-    margin-bottom: $spacing-unit;
-    border-radius: $border-radius;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  }
-  .project-modal-title {
-    background: $color-gradient-silver-dark;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
+.project-modal-overlay.active .project-modal {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-  .project-modal-description {
-    font-size: 1rem;
+.project-modal-image {
+  max-height: 300px;
+  object-fit: cover;
+  margin-bottom: $spacing-unit;
+  border-radius: $border-radius;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.project-modal-title {
+  background: $color-gradient-silver-dark;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.project-modal-description {
+  font-size: 1rem;
+  color: #333;
+  margin-top: 0.5rem;
+}
+
+.project-modal-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0 1.5rem;
+
+  li {
+    background-color: #eee;
     color: #333;
-    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    padding: 0.4rem 0.75rem;
+    border-radius: $border-radius;
+  }
+}
+
+.project-modal-link {
+  display: inline-block;
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: #2f4f4f;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: currentColor;
+    transition: transform 0.3s ease;
+    transform: scaleX(0);
+    transform-origin: left;
   }
 
-  .project-modal-tools {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin: 1rem 0 1.5rem;
-
-    li {
-      background-color: #eee;
-      color: #333;
-      font-size: 0.85rem;
-      padding: 0.4rem 0.75rem;
-      border-radius: $border-radius;
-    }
-  }
-
-  .project-modal-link {
-    display: inline-block;
-    font-size: 0.95rem;
-    font-weight: 300;
-    color: #2f4f4f;
-    position: relative;
-
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      background: currentColor;
-      transition: transform 0.3s ease;
-      transform: scaleX(0);
-      transform-origin: left;
-    }
-
-    &:hover::after {
-      transform: scaleX(1);
-    }
+  &:hover::after {
+    transform: scaleX(1);
   }
 }
 
