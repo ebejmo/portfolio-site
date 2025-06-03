@@ -10,7 +10,10 @@ readMoreBtn.addEventListener('click', () => {
 });
 
 import { initializeModal } from './components/modal';
+import { initializeFormValidation } from './formValidation';
 
 document.addEventListener('DOMContentLoaded', () => {
   initializeModal();
 });
+
+initializeFormValidation();

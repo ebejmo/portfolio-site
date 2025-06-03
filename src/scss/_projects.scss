@@ -2,6 +2,7 @@
 
 .projects-section {
   padding: 4rem 0;
+  border-bottom: 1px solid $border-color;
 
   .projects-grid {
     display: grid;
@@ -87,4 +88,8 @@
 
 .card3 .overlay {
   background: linear-gradient(135deg, #ffab1d, #f8501c);
+}
+
+.card4 .overlay {
+  background: linear-gradient(135deg, #ff1df0, #f81c1c);
 }

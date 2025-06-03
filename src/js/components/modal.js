@@ -44,7 +44,11 @@ export function initializeModal() {
   }
 
   function handleCloseTrigger(e) {
-    if (e.target === modalOverlay || e.target === closeBtn) {
+    const isOverlayClick = e.target === modalOverlay;
+    const isCloseButtonClick = e.target === closeBtn;
+    const isEscapeKey = e.type === 'keydown' && e.key === 'Escape';
+
+    if (isOverlayClick || isCloseButtonClick || isEscapeKey) {
       closeModal();
     }
   }
@@ -60,4 +64,5 @@ export function initializeModal() {
   });
 
   modalOverlay.addEventListener('click', handleCloseTrigger);
+  document.addEventListener('keydown', handleCloseTrigger);
 }

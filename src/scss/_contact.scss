@@ -1,0 +1,86 @@
+@use './variables' as *;
+
+.contact-section {
+  padding: 4rem 0;
+  border-bottom: 1px solid $border-color;
+
+  .contact-intro {
+    font-size: 1.1rem;
+    color: $color-text-light;
+    max-width: 600px;
+    margin: 0 auto $spacing-unit * 2;
+    text-align: center;
+    line-height: 1.6;
+    background: $gradient-silver-text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .contact-form {
+    max-width: 600px;
+    margin-top: 2rem;
+    margin-inline: auto;
+    padding: $spacing-unit;
+    border-radius: $border-radius;
+    background: rgba(255, 255, 255, 0.03);
+
+    .hidden {
+      position: absolute !important;
+      left: -9999px !important;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+
+      label {
+        display: block;
+        margin-bottom: 0.5rem;
+        display: block;
+        color: $color-text;
+      }
+
+      input,
+      textarea {
+        background: $color-bg;
+        width: 100%;
+        padding: 0.6rem;
+        border: 2px solid transparent;
+        font-family: inherit;
+        font-size: 1rem;
+        border-radius: $border-radius;
+        color: $color-text;
+        transition: border-color 0.3s ease;
+
+        &[aria-invalid='true'] {
+          border-color: $color-error;
+        }
+
+        &:focus {
+          outline: none;
+          border-color: $color-focus;
+        }
+      }
+
+      .error-message {
+        color: $color-error;
+        font-size: 0.875rem;
+        margin-top: 0.25rem;
+        display: block;
+      }
+    }
+  }
+
+  .success-message {
+    margin-top: 2rem;
+    font-size: 1.1rem;
+    text-align: center;
+    color: greenyellow;
+  }
+}
